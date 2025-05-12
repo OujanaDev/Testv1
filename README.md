@@ -1,10 +1,7 @@
 
 ````markdown
-# 🎮 Test de connexion à un jeu avec vérification de paiement
 
-Ceci est un petit projet que j’ai fait pour tester comment un joueur peut rejoindre un jeu en fonction du montant qu’il a payé.
-
-## 🛠️ Comment tester
+## Comment tester
 
 1. **Installer les dépendances**  
    Ouvre un terminal dans le dossier du projet et tape :
