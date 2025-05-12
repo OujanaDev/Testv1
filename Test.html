@@ -1,0 +1,16 @@
+<button onclick="joinGame()">Tester</button>
+
+<script>
+async function joinGame() {
+  const response = await fetch('http://localhost:3000/join-game', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      user_id: "Georges",
+      game_id: "CallofDuty001",
+      payment_amount: 5//georges a payé 20 il peut jouer jouer
+    })
+  });
+  console.log(await response.json());
+}
+</script>
