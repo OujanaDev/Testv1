@@ -10,46 +10,38 @@ Ceci est un petit projet que j’ai fait pour tester comment un joueur peut rejo
    ```bash
    npm install
    
-Lancer le serveur
-Une fois que c’est installé, lance le serveur avec :
-
-  ```bash
-  node Test.js
-
-Le serveur va démarrer sur http://localhost:3000.
-
-Ouvrir la page HTML
-Ouvre le fichier Test.html dans ton navigateur (double-clique dessus).
-
-Ouvrir la console développeur
-Appuie sur F12 ou fais clic droit → Inspecter → va dans l’onglet Console.
-
-Tester en cliquant sur le bouton
-Clique sur le bouton Tester pour envoyer une requête au serveur. Le résultat va s’afficher dans la console.
-
-Changer le montant pour tester l’échec
-Dans le fichier Test.html, modifie cette ligne :
-
-payment_amount: 5
-Si tu mets une valeur plus grande que 10, ça fonctionne.
-Si tu mets 10 ou moins, tu verras un message d’erreur.
-
-Fichiers du projet
-Test.html : Un fichier HTML avec un bouton pour faire le test.
-
-Test.js : Le code du serveur Node.js avec Express.
-
-README.md : Ce fichier.
-
-ℹ️ Infos en plus
-Le projet utilise les modules express et cors. Si tu ne les as pas, installe-les avec :
+Lancer le Serveur
+Une fois les dépendances installées, démarrez le serveur avec la commande suivante :
 
 bash
-Copier
-Modifier
+node Test.js
+Le serveur s'exécutera à l'adresse suivante : http://localhost:3000.
+
+Ouvrir la Page HTML
+Double-cliquez sur le fichier Test.html pour l'ouvrir dans votre navigateur.
+
+Accéder à la Console Développeur
+Appuyez sur F12 ou faites un clic droit → Inspecter → Accédez à l'onglet Console.
+
+Tester avec le Bouton
+Cliquez sur le bouton Tester pour envoyer une requête au serveur. Les résultats s'afficheront dans la console.
+
+Modifier le Montant pour Tester les Échecs
+Dans le fichier Test.html, modifiez la ligne suivante :
+
+JavaScript
+payment_amount: 5
+Si le montant est supérieur à 10, la connexion est réussie.
+Si le montant est 10 ou moins, le serveur affichera un message d’erreur.
+Fichiers du Projet
+Test.html : Fichier HTML avec un bouton pour effectuer des tests.
+Test.js : Code du serveur Node.js utilisant Express.
+README.md : Ce fichier de documentation.
+Informations Supplémentaires
+Ce projet utilise les modules express et cors. Si vous ne les avez pas encore installés, exécutez les commandes suivantes :
+bash
 npm init -y
 npm install express cors
-Résultat attendu
-Si le paiement est plus grand que 10 → le joueur peut rejoindre.
-
-Si le paiement est 10 ou moins → le serveur dit que le paiement a échoué.
+Résultat Attendu
+Si le paiement est supérieur à 10, le serveur permet au joueur de rejoindre.
+Si le paiement est égal ou inférieur à 10, le serveur renvoie un message d’échec.
