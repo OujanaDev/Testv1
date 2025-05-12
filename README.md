@@ -1,47 +1,71 @@
 
-#  Test de connexion à un jeu avec vérification de paiement
+````markdown
+# 🎮 Test de connexion à un jeu avec vérification de paiement
 
 Ceci est un petit projet que j’ai fait pour tester comment un joueur peut rejoindre un jeu en fonction du montant qu’il a payé.
 
-## Comment tester
+## 🛠️ Comment tester
 
 1. **Installer les dépendances**  
    Ouvre un terminal dans le dossier du projet et tape :
    ```bash
    npm install
-   
-Lancer le Serveur
-Une fois les dépendances installées, démarrez le serveur avec la commande suivante :
+````
 
-bash
-node Test.js
-Le serveur s'exécutera à l'adresse suivante : http://localhost:3000.
+2. **Lancer le serveur**
+   Une fois que c’est installé, lance le serveur avec :
 
-Ouvrir la Page HTML
-Double-cliquez sur le fichier Test.html pour l'ouvrir dans votre navigateur.
+   ```bash
+   node Test.js
+   ```
 
-Accéder à la Console Développeur
-Appuyez sur F12 ou faites un clic droit → Inspecter → Accédez à l'onglet Console.
+   Le serveur va démarrer sur `http://localhost:3000`.
 
-Tester avec le Bouton
-Cliquez sur le bouton Tester pour envoyer une requête au serveur. Les résultats s'afficheront dans la console.
+3. **Ouvrir la page HTML**
+   Ouvre le fichier `Test.html` dans ton navigateur (double-clique dessus).
 
-Modifier le Montant pour Tester les Échecs
-Dans le fichier Test.html, modifiez la ligne suivante :
+4. **Ouvrir la console développeur**
+   Appuie sur **F12** ou fais clic droit → **Inspecter** → va dans l’onglet **Console**.
 
-JavaScript
-payment_amount: 5
-Si le montant est supérieur à 10, la connexion est réussie.
-Si le montant est 10 ou moins, le serveur affichera un message d’erreur.
-Fichiers du Projet
-Test.html : Fichier HTML avec un bouton pour effectuer des tests.
-Test.js : Code du serveur Node.js utilisant Express.
-README.md : Ce fichier de documentation.
-Informations Supplémentaires
-Ce projet utilise les modules express et cors. Si vous ne les avez pas encore installés, exécutez les commandes suivantes :
-bash
+5. **Tester en cliquant sur le bouton**
+   Clique sur le bouton **Tester** pour envoyer une requête au serveur. Le résultat va s’afficher dans la console.
+
+6. **Changer le montant pour tester l’échec**
+   Dans le fichier `Test.html`, modifie cette ligne :
+
+   ```js
+   payment_amount: 5
+   ```
+
+   Si tu mets une valeur **plus grande que 10**, ça fonctionne.
+   Si tu mets **10 ou moins**, tu verras un message d’erreur.
+
+---
+
+## 📁 Fichiers du projet
+
+* `Test.html` : Un fichier HTML avec un bouton pour faire le test.
+* `Test.js` : Le code du serveur Node.js avec Express.
+* `README.md` : Ce fichier.
+
+---
+
+## ℹ️ Infos en plus
+
+Le projet utilise les modules **express** et **cors**.  :
+
+```bash
 npm init -y
 npm install express cors
-Résultat Attendu
-Si le paiement est supérieur à 10, le serveur permet au joueur de rejoindre.
-Si le paiement est égal ou inférieur à 10, le serveur renvoie un message d’échec.
+```
+
+---
+
+## ✅ Résultat attendu
+
+* Si le paiement est **plus grand que 10** → le joueur peut rejoindre.
+* Si le paiement est **10 ou moins** → le serveur dit que le paiement a échoué.
+
+````
+
+---
